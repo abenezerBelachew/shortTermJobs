@@ -15,7 +15,8 @@ def index(request, tag_slug = None):
         tag = get_object_or_404(Tag, slug=tag_slug)
         posts = posts.filter(tags__in=[tag])
     context = {'posts': posts, 'tag': tag}
-    return render(request, 'jobs/home.html', context)
+    return render
+    (request, 'jobs/home.html', context)
 
 
 class AddEntryView(CreateView):
